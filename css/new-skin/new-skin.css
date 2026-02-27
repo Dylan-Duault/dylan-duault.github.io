@@ -1000,18 +1000,6 @@ input[type="file"] {
 	display: block;
 }
 
-.info-list ul li:before {
-	content: '';
-	position: absolute;
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 1px;
-	background: -moz-radial-gradient(center, ellipse cover, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
-	background: -webkit-radial-gradient(center, ellipse cover, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
-	background: radial-gradient(ellipse at center, #dddddd 0%, rgba(255, 255, 255, 0) 70%);
-}
-
 .info-list ul li strong {
 	float: left;
 	margin-right: 8px;
