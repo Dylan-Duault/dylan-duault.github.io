@@ -619,7 +619,37 @@
 -->
 <script src="js/scripts.js"></script>
 <script>
-    document.getElementById('coding-years').textContent = Math.floor((new Date() - new Date(2012, 1, 14)) / (365.25 * 24 * 60 * 60 * 1000));
+(function() {
+    var cards = ['#about-card', '#resume-card', '#contacts-card'];
+    var switching = false;
+    var cooldown = 800;
+
+    if ($(window).width() < 1024) return;
+
+    $(document).on('scroll wheel', '.card-inner.active .card-wrap', function(e) {
+        if (switching) return;
+
+        var wrap = $(this);
+        var scrollTop = wrap.scrollTop();
+        var scrollHeight = wrap[0].scrollHeight;
+        var clientHeight = wrap[0].clientHeight;
+        var atBottom = scrollTop + clientHeight >= scrollHeight - 5;
+        var atTop = scrollTop <= 5;
+
+        var activeLink = $('.top-menu li.active a').attr('href');
+        var currentIndex = cards.indexOf(activeLink);
+
+        if (atBottom && e.originalEvent.deltaY > 0 && currentIndex < cards.length - 1) {
+            switching = true;
+            $('.top-menu a[href="' + cards[currentIndex + 1] + '"]').trigger('click');
+            setTimeout(function() { switching = false; }, cooldown);
+        } else if (atTop && e.originalEvent.deltaY < 0 && currentIndex > 0) {
+            switching = true;
+            $('.top-menu a[href="' + cards[currentIndex - 1] + '"]').trigger('click');
+            setTimeout(function() { switching = false; }, cooldown);
+        }
+    });
+})();
 </script>
 
 </body>
