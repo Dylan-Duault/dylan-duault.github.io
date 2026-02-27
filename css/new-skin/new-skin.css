@@ -817,7 +817,7 @@ input[type="file"] {
 }
 
 .card-inner .card-wrap {
-	padding: 30px 30px 0 30px;
+	padding: 30px 30px 80px 30px;
 	position: relative;
 }
 
@@ -2669,4 +2669,8 @@ a.next.page-numbers:hover {
 	.container {
 	    padding-top: 118px;
 	}
+}
+
+.mb-12 {
+	margin-bottom: 12px!important;
 }
