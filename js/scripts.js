@@ -444,7 +444,7 @@ $(function () {
 	revs_slider.owlCarousel({
 		margin: 0,
 		items: 1,
-		autoplay: false,
+		autoplay: true,
 		autoplayTimeout: 5000,
 		autoplayHoverPause: true,
 		loop: true,

@@ -1179,10 +1179,6 @@ input[type="file"] {
 /*
 	Resume
 */
-.resume-title,
-.skill-title {
-	padding: 0 0 30px 0;
-}
 
 .resume-title:after,
 .skill-title:after {
@@ -1207,7 +1203,7 @@ input[type="file"] {
 
 /* Resume */
 .resume-items .resume-item {
-	padding: 30px 0;
+	padding: 20px 0;
 }
 
 .resume-items .resume-item:after {
@@ -1257,7 +1253,7 @@ input[type="file"] {
 }
 
 .resume-items .resume-item p {
-	margin: 0;
+	margin: 0 0 8px 0;
 }
 
 .skills-list.list ul li .name {
